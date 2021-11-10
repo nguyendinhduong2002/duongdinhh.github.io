@@ -21,7 +21,7 @@ body{
 color:#ffffff;
 background-color:#40aa54;}
  
-/*==Navigation=====================================*/
+
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -99,7 +99,7 @@ background-color:#40aa54;}
     transition: all ease 0.3s;
 }
  
-/*==Search-Banner========================*/
+
 #search-banner{
     max-width: 1250px;
     height: 500px;
@@ -188,7 +188,7 @@ background-color:#40aa54;}
     background-color: #5ccf71;
     transition: all ease 0.3s;
 }
-/*==category================================*/
+
 #category,
 #popular-product,
 #popular-bundle-pack,
@@ -254,7 +254,7 @@ background-color:#40aa54;}
     transform: scale(1.1);
     transition: all ease 0.1s;
 }
-/*==popular-product========================*/
+
 #popular-product{
     margin: 80px auto;
 }
@@ -328,7 +328,7 @@ background-color:#40aa54;}
     font-size: 1.3rem;
 }
  
-/*==popular-bundle-pack==========================*/
+
 #popular-bundle-pack{
     display: flex;
     flex-direction: column;
@@ -346,7 +346,7 @@ background-color:#40aa54;}
     max-width: 1000px;
     width: 100%;
 }
-/*==clients=========================================*/
+
 #clients{
     display: flex;
     flex-direction: column;
@@ -414,7 +414,6 @@ background-color:#40aa54;}
 .client-box p{
     color: #7c7c7c;
 }
-/*==partner-logo=================================*/
 #partner{
     margin: 100px auto;
 }
@@ -436,7 +435,6 @@ background-color:#40aa54;}
     opacity: 1;
     transition: all ease 0.3s;
 }
-/*==Download-app===================================*/
 #download-app{
     max-width:1150px;
     width: 100%;
@@ -491,7 +489,7 @@ background-color:#40aa54;}
     object-fit: cover;
     object-position: center;
 }
-/*==footer============================*/
+
 footer{
     background-color: #1b1d1f;
     padding: 50px 20px;
@@ -559,7 +557,6 @@ footer{
     opacity: 1;
     transition: all ease 0.3s;
 }
-/*==Making-Responsive===================================*/
 .menu-icon,
 .menu-btn{
     display: none;
