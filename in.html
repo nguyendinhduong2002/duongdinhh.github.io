@@ -1,0 +1,158 @@
+<html>
+     <title>In</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<head>
+    <style>
+      * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+body > div {
+  margin: 15% auto 0;
+  max-width: 720px;
+}
+.tabs {
+  display: flex;
+  position: relative;
+}
+.tabs .line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  border-radius: 15px;
+  background-color: #35c29f;
+  transition: all 0.2s ease;
+}
+.tab-item {
+  min-width: 80px;
+  padding: 16px 20px 11px 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #35c2bb;
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 5px solid transparent;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.tab-icon {
+  font-size: 24px;
+  width: 32px;
+  position: relative;
+  top: 2px;
+}
+.tab-item:hover {
+  opacity: 1;
+  background-color: rgba(194, 53, 100, 0.05);
+  border-color: rgba(194, 53, 100, 0.1);
+}
+.tab-item.active {
+  opacity: 1;
+}
+.tab-content {
+  padding: 28px 0;
+}
+.tab-pane {
+  color: #333;
+  display: none;
+}
+.tab-pane.active {
+  display: block;
+}
+.tab-pane h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+    </style>
+</head>
+
+
+<body>
+<div>
+  <!-- Tab items -->
+  <div class="tabs">
+    <div class="tab-item active">
+      <i class="tab-icon fas fa-code"></i>
+      Phản ứng
+    </div>
+    <div class="tab-item">
+      <i class="tab-icon fas fa-cog"></i>
+      Góc
+    </div>
+    <div class="tab-item">
+      <i class="tab-icon fas fa-plus-circle"></i>
+      Đàn ông
+    </div>
+    <div class="tab-item">
+      <i class="tab-icon fas fa-pen-nib"></i>
+      Xem.js
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <!-- Tab content -->
+  <div class="tab-content">
+    <div class="tab-pane active">
+      <h2>Phản ứng</h2>
+      <p>Phản ứng làm cho nó không đau để tạo ra giao tiếp UIs tương tác. Thiết kế chế độ xem đơn giản cho từng trạng thái trong ứng dụng của bạn và React sẽ cập nhật và hiển thị đúng các thành phần khi dữ liệu của bạn thay đổi.</p>
+    </div>
+    <div class="tab-pane">
+      <h2>Góc</h2>
+      <p>Góc là một khung thiết kế ứng dụng và nền tảng phát triển để tạo ra các ứng dụng một trang hiệu quả và tinh vi.</p>
+    </div>
+    <div class="tab-pane">
+      <h2>Đàn ông</h2>
+      <p>Đàn ông là một khung JavaScript hiệu quả, được thử nghiệm chiến đấu để xây dựng các ứng dụng web hiện đại. Nó bao gồm tất cả mọi thứ bạn cần để xây dựng giao dịch người dùng phong phú hoạt động trên bất kỳ thiết bị nào.</p>
+    </div>
+    <div class="tab-pane">
+      <h2>Xem.js</h2>
+      <p>Vue (phát âm /vjuː/, like view) là một framework tiến bộ để xây dựng giao diện người dùng. Không giống như các khung nguyên khối khác, Vue được thiết kế từ đầu để có thể áp dụng dần dần.</p>
+    </div>
+  </div>
+</div>
+
+  <script>
+    const $ = document.querySelector.bind(document)
+    const $$ = document.querySelectorAll.bind(document)
+    const tabActive = $('.tab-item.active')
+    const line = $('.tabs .line')
+
+    line.style.left = tabActive.offsetLeft + 'px'
+    line.style.width = tabActive.offsetWidth + 'px'
+
+
+    const tabs = $$('.tab-item')
+    const panes = $$('.tab-pane')
+
+    tabs.forEach((tab, index) => {
+      const pane = panes[index]
+
+      tab.onclick = function() {
+    
+        $('.tab-item.active').classList.remove('active')
+        $('.tab-pane.active').classList.remove('active')
+
+        line.style.left = this.offsetLeft + 'px'
+        line.style.width = this.offsetWidth + 'px'
+
+        this.classList.add('active')
+        pane.classList.add('active')
+
+      }
+    })
+  </script>
+
+</body>
+</html>
