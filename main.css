@@ -1,5 +1,5 @@
 *{
-    font-family: poppins;
+    font-family:Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -328,7 +328,6 @@ background-color:#40aa54;}
     font-size: 1.3rem;
 }
  
-
 #popular-bundle-pack{
     display: flex;
     flex-direction: column;
@@ -346,7 +345,6 @@ background-color:#40aa54;}
     max-width: 1000px;
     width: 100%;
 }
-
 #clients{
     display: flex;
     flex-direction: column;
@@ -489,7 +487,6 @@ background-color:#40aa54;}
     object-fit: cover;
     object-position: center;
 }
-
 footer{
     background-color: #1b1d1f;
     padding: 50px 20px;
@@ -829,4 +826,7 @@ footer{
     .right-nav{
         grid-gap: 5px;
     }
+}
+h2{
+    color: rgb(37, 255, 182);
 }
